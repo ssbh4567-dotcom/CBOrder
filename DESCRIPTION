@@ -1,0 +1,11 @@
+Package: CBOrder
+Type: Package
+Title: Tests for Complete Bipartite Ordered Alternatives in One-Way ANOVA
+Version: 0.1.0
+Authors@R: person("Subha", "Halder", email = "sb.halder123456@gmail.com", role = c("aut", "cre"))
+Description: Implements five statistical tests for equality of means under Complete Bipartite (CB) order in one-way ANOVA. The functions include: CBLRT (likelihood ratio test), CBMax (maximum standardized mean difference), CBMin (minimum standardized mean difference), CBMaxMin (max-min standardized difference), and CBMinMax (min-max standardized difference). Each function takes a list of numeric vectors (groups), the number of control groups (k0), and a significance level as inputs, returning the test statistic, critical value, p-value, and decision. The tests evaluate the hypotheses H_0: μ_i = μ_j versus H_1: μ_i ≤ μ_j (at least one strict inequality) for i = 1, 2, ..., k0 and j = k0 + 1, ..., p (total number of treatment groups). Bootstrap resampling is used to estimate critical values and p-values under the null hypothesis of equal means.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: Iso
+RoxygenNote: 7.3.1
