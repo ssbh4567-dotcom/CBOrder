@@ -157,9 +157,9 @@ CBLRT <- function(sample_data, significance_level, k0, n.boot = 100000, seed = N
 
   # Output
   return(paste(
-    "Critical value:", round(quantile_value, 5),
-    "; CBLRT Test statistic:", round(lambda, 5),
-    "; p-value:", round(p_value, 5),
+    "Critical value:", quantile_value,
+    "; CBLRT Test statistic:", lambda,
+    "; p-value:", p_value,
     "; Result:", result
   ))
 }
@@ -256,9 +256,9 @@ CBMax <- function(sample_data, significance_level, k0, n.boot = 100000, seed = N
 
   # Output summary
   return(paste(
-    "Critical value:", round(quantile_value, 5),
-    "; CBMax Test statistic:", round(CB, 5),
-    "; p-value:", round(p_value, 5),
+    "Critical value:", quantile_value,
+    "; CBMax Test statistic:", CB,
+    "; p-value:", p_value,
     "; Result:", result
   ))
 }
@@ -357,9 +357,9 @@ CBMin <- function(sample_data, significance_level, k0, n.boot = 100000, seed = N
 
   # Output summary
   return(paste(
-    "Critical value:", round(quantile_value, 5),
-    "; CBMin Test statistic:", round(CB, 5),
-    "; p-value:", round(p_value, 5),
+    "Critical value:", quantile_value,
+    "; CBMin Test statistic:", CB,
+    "; p-value:", p_value,
     "; Result:", result
   ))
 }
@@ -456,9 +456,9 @@ CBMaxMin <- function(sample_data, significance_level, k0, n.boot = 100000, seed 
 
   # Output summary
   return(paste(
-    "Critical value:", round(quantile_value, 5),
-    "; CBMaxMin Test statistic:", round(CB, 5),
-    "; p-value:", round(p_value, 5),
+    "Critical value:", quantile_value,
+    "; CBMaxMin Test statistic:", CB,
+    "; p-value:", p_value,
     "; Result:", result
   ))
 }
@@ -554,9 +554,9 @@ CBMinMax <- function(sample_data, significance_level, k0, n.boot = 100000, seed 
 
   # Output summary
   return(paste(
-    "Critical value:", round(quantile_value, 5),
-    "; CBMinMax Test statistic:", round(CB, 5),
-    "; p-value:", round(p_value, 5),
+    "Critical value:", quantile_value,
+    "; CBMinMax Test statistic:", CB, 
+    "; p-value:", p_value,
     "; Result:", result
   ))
 }
