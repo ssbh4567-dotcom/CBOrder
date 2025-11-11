@@ -1,10 +1,10 @@
 #' Likelihood Ratio Test for Complete Bipartite (CB) Ordered Alternatives
 #'
 #' Performs a likelihood ratio test (LRT) to evaluate the equality of means
-#' across multiple groups under the Complete Bipartite (CB) ordered alternatives.
+#' across multiple groups against the Complete Bipartite (CB) ordered alternatives.
 #' The test compares the null hypothesis of equal means for all groups
 #' to the alternative that the control group means are less than or equal
-#' to the treatment group means under the CB order restriction.
+#' to the treatment group means.
 #'
 #' @param sample_data A list of numeric vectors, where the first \code{k0} elements
 #' represent control groups and the remaining elements represent treatment groups.
@@ -23,10 +23,6 @@
 #' The critical value and p-value are estimated by a bootstrap procedure.
 #' The test evaluates the hypotheses H_0: μ_i = μ_j versus H_1: μ_i ≤ μ_j (at least one strict inequality)
 #' for i = 1, ..., k0 (control groups) and j = k0 + 1, ..., p (total treatment groups).
-#'
-#' @seealso Halder, Mondal, and Kumar (2025)
-#' "Testing Against Complete Bipartite Ordered Alternatives in One-way ANOVA"
-#' (forthcoming manuscript).
 #'
 #' @importFrom stats quantile rnorm var
 #' @importFrom Iso pava
@@ -167,7 +163,7 @@ CBLRT <- function(sample_data, significance_level, k0, n.boot = 100000, seed = N
 #' Maximum Difference-based Test for Complete Bipartite (CB) Ordered Alternatives
 #'
 #' Performs a Maximum Difference-based (CBMax) test to evaluate the equality of group means
-#' under the Complete Bipartite (CB) order restriction. This test compares the null
+#' against the Complete Bipartite (CB) order restriction. This test compares the null
 #' hypothesis of equal means across all groups against the alternative that the means
 #' of the control groups are less than or equal to those of the treatment groups.
 #'
@@ -268,7 +264,7 @@ CBMax <- function(sample_data, significance_level, k0, n.boot = 100000, seed = N
 #' Minimum Difference-based Test for Complete Bipartite (CB) Ordered Alternatives
 #'
 #' Performs a Minimum Difference-based (CBMin) test to evaluate the equality of group means
-#' under the Complete Bipartite (CB) order restriction. This test compares the null
+#' against the Complete Bipartite (CB) order restriction. This test compares the null
 #' hypothesis of equal means across all groups against the alternative that the means
 #' of the control groups are less than or equal to those of the treatment groups.
 #'
@@ -369,7 +365,7 @@ CBMin <- function(sample_data, significance_level, k0, n.boot = 100000, seed = N
 #' Max-Min Difference-based Test for Complete Bipartite (CB) Ordered Alternatives
 #'
 #' Performs a Max-Min Difference-based (CBMaxMin) test to evaluate the equality of group means
-#' under the Complete Bipartite (CB) order restriction. This test compares the null
+#' against the Complete Bipartite (CB) order restriction. This test compares the null
 #' hypothesis of equal means across all groups against the alternative that the means
 #' of the control groups are less than or equal to those of the treatment groups.
 #'
@@ -467,7 +463,7 @@ CBMaxMin <- function(sample_data, significance_level, k0, n.boot = 100000, seed 
 #' Min-Max Difference-based Test for Complete Bipartite (CB) Ordered Alternatives
 #'
 #' Performs a Min-Max Difference-based (CBMinMax) test to evaluate the equality of group means
-#' under the Complete Bipartite (CB) order restriction. This test compares the null
+#' against the Complete Bipartite (CB) order restriction. This test compares the null
 #' hypothesis of equal means across all groups against the alternative that all treatment
 #' groups are larger than the control groups.
 #'
@@ -560,6 +556,7 @@ CBMinMax <- function(sample_data, significance_level, k0, n.boot = 100000, seed 
     "; Result:", result
   ))
 }
+
 
 
 
