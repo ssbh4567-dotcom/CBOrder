@@ -70,7 +70,7 @@ Monte Carlo check of how often the data-dependent MLE uniqueness condition (Equa
 
 **Runtime:** short — seconds to a couple of minutes.
 
-**Output:** console-only — one-row data frame per scenario with `Groups`, `Total_Simulations`, `Times_Condition_Held`, and `Success_Rate`.
+**Output:** console-only — one-row data frame per scenario with `Groups`, `Total_Simulations`, `Times_Condition_Held`, and `Equation_2.5_satisfied`.
 
 ---
 
