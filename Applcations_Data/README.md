@@ -28,10 +28,8 @@ This folder contains the datasets used in the two real-data applications reporte
 - `1-time`, `2-times`, `4-times` — test drug regimens, 20 mg once/10 mg twice/5 mg four-times daily (partition **P1**)
 - `drug D`, `drug E` — active comparators (partition **P2**)
 
-Normality was confirmed for all five groups via the Shapiro–Wilk test (p-values: 0.4541, 0.5892, 0.7262, 0.4890, 0.9696).
-
 ---
 
 ## Reproducibility note
 
-Values in both files are identical to those hardcoded in the corresponding analysis scripts (verified by direct comparison), so the data and code stay in sync as a single, citable source of the exact inputs used to generate the paper's results.
+Values in both files are identical to those hardcoded in the corresponding analysis scripts, so the data and code stay in sync as a single, citable source of the exact inputs used to generate the paper's results.
