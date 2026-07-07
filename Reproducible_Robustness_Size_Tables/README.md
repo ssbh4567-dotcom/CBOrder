@@ -43,7 +43,7 @@ Each script fixes the mean vector, variance vector, and partition size (`k0 = 2`
 
 ## How to run
 
-Download and run each script independently in R/RStudio; they do not depend on one another. With defaults (`M = Q = 100`), runtime is short. Reproducing exactly (`M = Q = 5000`) is expensive: a single empirical size value takes ~30 minutes (CBLRT) or ~10 minutes (CBMax/CBMin/CBMaxMin/CBMinMax) per distribution on a 64-core server, so a full script can take **several days** on a standard desktop/laptop.
+Download and run each script independently in R/RStudio; they do not depend on one another. With defaults (`M = Q = 100`), runtime is short. Reproducing exactly (`M = Q = 5000`) is expensive: a single empirical size value takes ~30 minutes (CBLRT) or ~9 minutes (CBMax/CBMin/CBMaxMin/CBMinMax) per distribution on a 64-core server, so a full script can take **several days** on a standard desktop/laptop.
 
 ## Output
 
