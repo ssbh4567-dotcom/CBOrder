@@ -1,6 +1,6 @@
 # Reproducible_Ordinary_Power_Tables
 
-Reproduces the empirical ordinary power results for the five complete bipartite tests (`CB_LRT`, `CB_Max`, `CB_Min`, `CB_MaxMin`, `CB_MinMax`), and their comparison against a benchmark test.
+Reproduces the empirical ordinary power results for the five complete bipartite tests (`CBLRT`, `CBMax`, `CBMin`, `CBMaxMin`, `CBMinMax`), and their comparison against a benchmark test.
 
 ## Contents (in paper order)
 
