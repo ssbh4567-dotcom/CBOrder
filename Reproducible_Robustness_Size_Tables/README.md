@@ -22,7 +22,7 @@ Each script is fully self-contained: all required functions are defined within t
 
 ## Data
 
-No external data — all samples are simulated internally, under a fixed mean and variance configuration (`p = 6`, `k0 = 2`), across 12 sample-size configurations per script.
+No external data — all samples are simulated internally, under a fixed mean and variance configuration (`p = 6`, `k = 2`), across 12 sample-size configurations per script.
 
 ## What the scripts do
 
