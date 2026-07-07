@@ -24,7 +24,7 @@ No external data — all samples are simulated internally from normal distributi
 ## What the scripts do
 
 * **`run_table1_power.R` – `run_table10_power.R`**: each fixes one or more sample-size/variance configurations and a base mean-shift vector, then computes empirical power under each of the five tests as the mean shift is scaled from 0 up to 5× (17 steps), one column at a time (LRT, Max, Min, MaxMin, MinMax).
-* **`run_comparison_with_benchmark_size_power.R`**: computes empirical size (mean = 0) and power (non-zero mean shift) for the five tests across 5 sample-size configurations (`N1_star`–`N5_star`) and 6 variance configurations (`SD1`–`SD6`), for direct comparison with a benchmark test.
+* **`run_comparison_with_benchmark_size_power.R`**: computes empirical size (mean = 0) and power (non-zero mean shift) for the five tests across 5 sample-size configurations (`N1_star`–`N5_star`) and 6 variance configurations (`SD1`–`SD6`), for direct comparison with benchmark tests.
 
 ## Key settings
 
