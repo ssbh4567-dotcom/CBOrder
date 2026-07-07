@@ -1,6 +1,6 @@
 # Reproducible_Size_Tables
 
-Reproduces the empirical size results for the five complete bipartite tests (`CB_LRT`, `CB_Max`, `CB_Min`, `CB_MaxMin`, `CB_MinMax`), reported in Tables 2 and 3 of the manuscript.
+Reproduces the empirical size results for the five complete bipartite tests (`CBLRT`, `CBMax`, `CBMin`, `CBMaxMin`, `CBMinMax`), reported in Tables 2 and 3 of the manuscript.
 
 ## Contents (in paper order)
 
