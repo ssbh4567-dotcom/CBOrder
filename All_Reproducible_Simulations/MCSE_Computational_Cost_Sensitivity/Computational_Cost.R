@@ -10,11 +10,11 @@
 #
 # 1. Low-dimensional setting ($p=4$): The pairwise tests (CBMax, CBMin, CBMaxMin,
 # and CBMinMax) are computationally efficient, each requiring approximately 
-# 0.60 minutes, whereas the CBLRT is the most computationally intensive,
-# requiring approximately 3.0 minutes.
+# 0.40 minutes, whereas the CBLRT is the most computationally intensive,
+# requiring approximately 2 minutes.
 
 # 2. High-dimensional setting ($p=20$): The execution time increases to 
-# approximately 4.0 minutes for the pairwise tests and 7.0 minutes for the CBLRT.
+# approximately 2.0 minutes for the pairwise tests and 4.0 minutes for the CBLRT.
 
 # Note: The reported execution times are based on our computing system and may 
 # vary depending on the system.
@@ -24,12 +24,21 @@
 # substantially faster than the CBLRT.
 
 
-# Ensure the custom package or functions are loaded
-if (!require("CBOrder")) {
-  if (!require("devtools")) install.packages("devtools")
-  devtools::install_github("ssbh4567-dotcom/CBOrder", force = TRUE)
-  library(CBOrder)
+# ==============================================================================
+# Increase timeout limit to 10 minutes to prevent GitHub download failures 
+options(timeout = 600)
+
+# Ensure the custom package is loaded using 'remotes' (lighter and faster than devtools)
+if (!requireNamespace("CBOrder", quietly = TRUE)) {
+  if (!requireNamespace("remotes", quietly = TRUE)) {
+    install.packages("remotes")
+  }
+  message("CBOrder not found. Installing from GitHub...")
+  remotes::install_github("ssbh4567-dotcom/CBOrder", force = TRUE)
 }
+
+library(CBOrder)
+# ==============================================================================
 
 alpha <- 0.05
 k0 <- 2
