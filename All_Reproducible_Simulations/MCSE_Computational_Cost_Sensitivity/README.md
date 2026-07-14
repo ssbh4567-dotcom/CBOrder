@@ -20,7 +20,7 @@ This folder contains four R scripts that reproduce the Monte Carlo standard erro
 * Packages:
   * `CBOrder` — required only for `Computational_Cost.R`; installed automatically from GitHub if missing:
     ```r
-    devtools::install_github("ssbh4567-dotcom/CBOrder")
+    remotes::install_github("ssbh4567-dotcom/CBOrder", force = TRUE)
     ```
   * `Iso`, `parallel`, `doParallel`, `foreach` — required for `MCSE_Sensitivity.R` and `Sensitivity_of_Algorithm_1.R`; installed automatically if missing
   * `Sensitivity_Eq_2_5.R` uses base R only
