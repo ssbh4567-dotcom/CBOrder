@@ -58,13 +58,22 @@ plot_data <- data.frame(
 
 # ------------------------------------------------------------------------------
 # 5. COMPLETE BIPARTITE TESTS (Matches Table 11)
-# ------------------------------------------------------------------------------
-# Ensure the custom package is installed
-if (!require("CBOrder")) {
-  if (!require("devtools")) install.packages("devtools")
-  devtools::install_github("ssbh4567-dotcom/CBOrder", force = TRUE)
-  library(CBOrder)
+# ==============================================================================
+# Increase timeout limit to 10 minutes to prevent GitHub download failures 
+options(timeout = 600)
+
+# Ensure the custom package is loaded using 'remotes' (lighter and faster than devtools)
+if (!requireNamespace("CBOrder", quietly = TRUE)) {
+  if (!requireNamespace("remotes", quietly = TRUE)) {
+    install.packages("remotes")
+  }
+  message("CBOrder not found. Installing from GitHub...")
+  remotes::install_github("ssbh4567-dotcom/CBOrder", force = TRUE)
 }
+
+library(CBOrder)
+# ==============================================================================
+
 
 cat("\n--- Table 11: Complete Bipartite Order-Restricted Tests ---\n")
 # Note: Ensure the function documentation specifies that 100,000 bootstrap
@@ -75,11 +84,11 @@ k0 <- 2  # First two elements in data_list are the P1 controls
 
 cat("\n--- # NOTE: Computational time is approx 10 min (total) for Table 11 ---\n")
 
-print(CBLRT(data_list, alpha, k0), seed = 456)
-print(CBMax(data_list, alpha, k0), seed = 456)
-print(CBMin(data_list, alpha, k0), seed = 456)
-print(CBMaxMin(data_list, alpha, k0), seed = 456)
-print(CBMinMax(data_list, alpha, k0), seed = 456)
+print(CBLRT(data_list, alpha, k0, seed = 456))
+print(CBMax(data_list, alpha, k0, seed = 456))
+print(CBMin(data_list, alpha, k0, seed = 456))
+print(CBMaxMin(data_list, alpha, k0, seed = 456))
+print(CBMinMax(data_list, alpha, k0, seed = 456))
 
 # ------------------------------------------------------------------------------
 # 6. SIMULTANEOUS CONFIDENCE INTERVALS
@@ -87,7 +96,7 @@ print(CBMinMax(data_list, alpha, k0), seed = 456)
 cat("\n--- Simultaneous Lower Confidence Bounds ---\n")
 
 # Critical value corresponding to the CBMax test
-c_val <- 2.68250
+c_val <- 2.68817
 
 # Helper function to compute the lower bound of the contrast: mu_t - mu_s
 get_lower_bound <- function(trt, ctrl) {
@@ -181,24 +190,33 @@ print(round(p_values, 4))
 # 5. COMPLETE BIPARTITE TESTS (Matches Table 13)
 # ------------------------------------------------------------------------------
 
-# Ensure the custom package is installed
-if (!require("CBOrder")) {
-  if (!require("devtools")) install.packages("devtools")
-  devtools::install_github("ssbh4567-dotcom/CBOrder", force = TRUE)
-  library(CBOrder)
+# ==============================================================================
+# Increase timeout limit to 10 minutes to prevent GitHub download failures 
+options(timeout = 600)
+
+# Ensure the custom package is loaded using 'remotes' (lighter and faster than devtools)
+if (!requireNamespace("CBOrder", quietly = TRUE)) {
+  if (!requireNamespace("remotes", quietly = TRUE)) {
+    install.packages("remotes")
+  }
+  message("CBOrder not found. Installing from GitHub...")
+  remotes::install_github("ssbh4567-dotcom/CBOrder", force = TRUE)
 }
+
+library(CBOrder)
+# ==============================================================================
+
 
 cat("\n--- Table 13: Complete Bipartite Order-Restricted Tests ---\n")
 alpha <- 0.05
 k0 <- 3  # First three elements in data_list are the P1 test drug regimens
 
 cat("\n--- # NOTE: Computational time is approx 10 min (total) for Table 13 ---\n")
-print(CBLRT(data_list, alpha, k0), seed = 456)
-print(CBMax(data_list, alpha, k0), seed = 456)
-print(CBMin(data_list, alpha, k0), seed = 456)
-print(CBMaxMin(data_list, alpha, k0), seed = 456)
-print(CBMinMax(data_list, alpha, k0), seed = 456)
-
+print(CBLRT(data_list, alpha, k0, seed = 456))
+print(CBMax(data_list, alpha, k0, seed = 456))
+print(CBMin(data_list, alpha, k0, seed = 456))
+print(CBMaxMin(data_list, alpha, k0, seed = 456))
+print(CBMinMax(data_list, alpha, k0, seed = 456))
 
 # ------------------------------------------------------------------------------
 # 6. SIMULTANEOUS CONFIDENCE INTERVALS
@@ -206,7 +224,7 @@ print(CBMinMax(data_list, alpha, k0), seed = 456)
 cat("\n--- Simultaneous Lower Confidence Bounds ---\n")
 
 # Critical value corresponding to the CBMax test
-c_val <- 2.54549
+c_val <- 2.54922
 
 # Helper function to compute the lower bound of the contrast: mu_t - mu_s
 get_lower_bound <- function(trt, ctrl) {
