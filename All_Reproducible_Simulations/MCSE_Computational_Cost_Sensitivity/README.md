@@ -56,7 +56,7 @@ Benchmarks execution time only (no test statistics) for the five tests as the nu
 
 **What it does:** for `p = 4, 8, 12, 16, 20`, simulates `p` groups (`rnorm(50, 0, 4)`) and times `CBLRT`, `CBMax`, `CBMin`, `CBMaxMin`, `CBMinMax` (`alpha = 0.05`, `k0 = 2`, 100,000 bootstrap resamples), printing only elapsed time in minutes.
 
-**Runtime:** system-dependent; per the paper, ~0.40 min per pairwise test and ~2.0 min for `CBLRT` at `p = 4`, rising to ~2.6 min and ~5.0 min respectively at `p = 20`. All five `p` values together can take roughly an hour. Actual times may be higher or lower depending on your system's hardware and current load.
+**Runtime:** system-dependent; per the paper, ~0.40 min per pairwise test and ~2.0 min for `CBLRT` at `p = 4`, rising to ~2.6 min and ~5.0 min respectively at `p = 20`. Actual times may be higher or lower depending on your system's hardware and current load.
 
 **Output:** console-only — elapsed time (minutes) per test per `p`. No test statistics or p-values are returned (`invisible()`).
 
