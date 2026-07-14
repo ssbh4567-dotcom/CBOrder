@@ -3,12 +3,12 @@
 This script reproduces both real-data applications in the paper using the `CBOrder` package: Application 1 (Vitamin C tooth growth) and Application 2 (cholesterol reduction).
 
 ## Requirements
-- R (version used for the paper: 4.3.3)
+- R (version: 4.3.3)
 - `CBOrder` package — installed automatically from GitHub if not already available:
   ```r
-  devtools::install_github("ssbh4567-dotcom/CBOrder")
+  remotes::install_github("ssbh4567-dotcom/CBOrder", force = TRUE)
   ```
-- `devtools` (installed automatically if missing)
+- `remotes` (installed automatically if missing)
 
 ## Data
 Input data are hardcoded directly in the script as numeric vectors (see `Applcations_Data/` for the same values as standalone CSV files with source citations).
