@@ -14,7 +14,7 @@
 # requiring approximately 2 minutes.
 
 # 2. High-dimensional setting ($p=20$): The execution time increases to 
-# approximately 2.0 minutes for the pairwise tests and 4.0 minutes for the CBLRT.
+# approximately 2.6 minutes for the pairwise tests and 5.0 minutes for the CBLRT.
 
 # Note: The reported execution times are based on our computing system and may 
 # vary depending on the system.
