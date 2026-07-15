@@ -41,7 +41,7 @@ Here, `data` should be supplied as a list of vectors $(\underline{X}_1, \underli
 CBOrder/
 ├── R/, man/, DESCRIPTION, NAMESPACE     # Package source and documentation
 └── All_Reproducible_Simulations/
-    ├── Applcations_Data/                               # Real-data application datasets (CSV)
+    ├── Applications_Data/                              # Real-data application datasets (CSV)
     ├── Reproducible_Applications_and_Boxplot/          # Real-data applications & boxplots (Tables 10-13)
     ├── Reproducible_Size_Tables/                       # Empirical size (Tables 2-3)
     ├── Reproducible_Ordinary_Power_Tables/             # Empirical power (Table 8, S6.3-S6.13)
@@ -59,6 +59,7 @@ Each subfolder has its own `README.md` with script-level details and run instruc
 * R (version: 4.3.3); MATLAB for the two penalized-power-plot folders
 * R packages (installed automatically where needed): `Iso`, `parallel`, `doParallel`, `foreach`, `LaplacesDemon`, `remotes`
 * Multiple CPU cores recommended for bootstrap-based procedures (paper used 64 cores)
+
 ## Computational cost
  
 With `M = Q = 5000` (bootstrap replications and Monte Carlo simulations, as used in the paper), on a 64-core server, computing a single empirical size/power value takes roughly **~30 minutes for `CBLRT`** and **~9–10 minutes for each of `CBMax`, `CBMin`, `CBMaxMin`, and `CBMinMax`**. Runtime also scales with the number of treatment groups `p`: at `p = 4` each pairwise test takes ~0.6 min and `CBLRT` ~3.0 min, rising to ~4.0 min and ~7.0 min respectively at `p = 20` (100,000 bootstrap resamples; see `MCSE_Computational_Cost_Sensitivity/`). Full reproduction of all tables is therefore expensive and can take several days on a standard desktop/laptop — reduce `M`/`Q` for quick testing.
