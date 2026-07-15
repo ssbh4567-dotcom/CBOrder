@@ -7,7 +7,7 @@ R package implementing the complete bipartite order-restricted tests (`CBLRT`, `
 ## Installation
  
 ```r
-devtools::install_github("ssbh4567-dotcom/CBOrder")
+remotes::install_github("ssbh4567-dotcom/CBOrder", force = TRUE)
 ```
  
 ## Usage of R package for implementation of the five tests
@@ -15,12 +15,14 @@ devtools::install_github("ssbh4567-dotcom/CBOrder")
 The following steps outline the procedure to implement the proposed tests using the `CBOrder` package, which includes the functions for the Likelihood Ratio Test (LRT) and the four pairwise standardized mean difference-based tests (`CBMax`, `CBMin`, `CBMaxMin`, and `CBMinMax`).
  
 ```r
-# Install and load the required package
-install.packages("devtools")
-library(devtools)
- 
-# Install and load the CBOrder package from GitHub
-install_github("ssbh4567-dotcom/CBOrder", force = TRUE)
+# Increase timeout limit to prevent download failures 
+options(timeout = 600)
+
+# Safely install and load the CBOrder package from GitHub using 'remotes'
+if (!requireNamespace("CBOrder", quietly = TRUE)) {
+  if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
+  remotes::install_github("ssbh4567-dotcom/CBOrder", force = TRUE)
+}
 library(CBOrder)
  
 # Perform the proposed tests
@@ -55,7 +57,7 @@ Each subfolder has its own `README.md` with script-level details and run instruc
 ## Requirements
  
 * R (version: 4.3.3); MATLAB for the two penalized-power-plot folders
-* R packages (installed automatically where needed): `Iso`, `parallel`, `doParallel`, `foreach`, `LaplacesDemon`, `devtools`
+* R packages (installed automatically where needed): `Iso`, `parallel`, `doParallel`, `foreach`, `LaplacesDemon`, `remotes`
 * Multiple CPU cores recommended for bootstrap-based procedures (paper used 64 cores)
 ## Computational cost
  
